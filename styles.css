@@ -82,9 +82,10 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--card-border); background: var(--card); color: var(--muted);
 }
 .badge-iskills {
-  background: linear-gradient(90deg, rgba(34,211,238,.18), rgba(249,115,22,.18));
-  border-color: rgba(34,211,238,.4); color: #eaf6ff;
+  background: #ffffff; border-color: #ffffff; color: #0b2545;
+  display: inline-flex; align-items: center; gap: 8px;
 }
+.badge-iskills img { width: 22px; height: 22px; border-radius: 4px; }
 .hero h1 { font-size: clamp(36px, 5vw, 62px); line-height: 1.08; font-weight: 800; letter-spacing: -.02em; }
 .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero h1 .iam { color: var(--muted); font-weight: 600; font-size: .62em; display: block; margin-top: 10px; }
@@ -218,9 +219,10 @@ img { max-width: 100%; height: auto; }
   border: 1px solid rgba(34,211,238,.35); border-radius: 20px; padding: 28px;
 }
 .iskills-badge {
-  width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center;
-  background: var(--grad); font-size: 26px; margin-bottom: 14px;
+  width: 132px; height: 132px; border-radius: 20px; display: grid; place-items: center;
+  background: #ffffff; margin-bottom: 14px; padding: 6px;
 }
+.iskills-badge img { width: 120px; height: 120px; border-radius: 14px; }
 .iskills-card h3 { color: var(--ink); margin: 0 0 2px; }
 .iskills-role { font-weight: 700; color: var(--cyan); }
 .iskills-card a { color: var(--cyan); font-weight: 600; text-decoration: none; }
