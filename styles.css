@@ -103,17 +103,9 @@ img { max-width: 100%; height: auto; }
 .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero h1 .iam { color: var(--muted); font-weight: 600; font-size: .62em; display: block; margin-top: 10px; }
 
-.rotator {
-  display: inline-block; margin-top: 8px;
-  background: var(--grad); color: #fff;
-  padding: 4px 18px; border-radius: 12px;
-  box-shadow: 0 10px 34px rgba(59,130,246,.45);
-  font-size: .72em;
-}
-#rotating-skill { display: inline-block; animation: skillFlip .55s ease; }
-@keyframes skillFlip {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+.static-skill {
+  display: inline-block; margin-top: 8px; font-size: .72em; font-weight: 800;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 
 .hero-sub { margin: 24px 0; font-size: 18px; color: var(--muted); max-width: 580px; }
