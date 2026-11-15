@@ -1,13 +1,12 @@
-// Rotating skills — cycles through Ikhlaq's core skills
-// in the hero, like the reference site's rotating job title.
+// Rotating skills — SEO + automation, cycles in the hero.
 const skills = [
-  "SEO Specialist",
+  "SEO & Automation Expert",
   "Technical SEO Expert",
-  "On-Page SEO Expert",
+  "Outreach Automation Expert",
+  "Python Automation Expert",
   "Link Building Expert",
   "AEO & GEO Specialist",
-  "Outreach Automation Expert",
-  "Keyword Researcher",
+  "On-Page SEO Expert",
   "WordPress SEO Expert"
 ];
 
@@ -17,8 +16,26 @@ let i = 0;
 setInterval(() => {
   i = (i + 1) % skills.length;
   el.textContent = skills[i];
-  // restart the flip animation
   el.style.animation = "none";
-  void el.offsetWidth; // reflow
+  void el.offsetWidth; // reflow to restart the flip animation
   el.style.animation = "";
 }, 2600);
+
+// Animated stat counters in the hero.
+const counters = document.querySelectorAll(".count");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const target = +entry.target.dataset.target;
+    let current = 0;
+    const step = () => {
+      current += 1;
+      if (current > target) current = target;
+      entry.target.textContent = current;
+      if (current < target) setTimeout(step, 120);
+    };
+    step();
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.6 });
+counters.forEach((c) => observer.observe(c));
