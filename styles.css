@@ -116,8 +116,8 @@ img { max-width: 100%; height: auto; }
   background: transparent; box-shadow: none; border: none;
 }
 .photo-frame img {
-  display: block; border-radius: 0; width: 100%; max-width: 420px;
-  max-height: 480px; object-fit: cover; object-position: top;
+  display: block; border-radius: 0; width: 100%; max-width: 440px;
+  max-height: 520px; object-fit: contain; object-position: center top;
   background: transparent;
   filter: drop-shadow(0 24px 44px rgba(0,0,0,.55));
 }
