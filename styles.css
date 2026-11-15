@@ -129,7 +129,7 @@ img { max-width: 100%; height: auto; }
   display: block; font-size: 40px; font-family: "Sora", sans-serif; line-height: 1.05;
   background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.hero-stats span { font-size: 13px; color: var(--muted); }
+.hero-stats li > span { display: block; font-size: 13px; color: var(--muted); margin-top: 4px; }
 
 /* Photo — the original night portrait, cinematic: gradient frame + blue spotlight glow */
 .hero-photo { position: relative; text-align: center; align-self: start; max-width: 460px; width: 100%; margin: 58px auto 0; }
