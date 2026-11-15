@@ -1,3 +1,28 @@
+// Flip-book skills — one skill flips over to the next, like a notepad page.
+const skills = [
+  "SEO & Automation Expert",
+  "Technical SEO Expert",
+  "Outreach Automation Expert",
+  "Python Automation Expert",
+  "Link Building Expert",
+  "AEO & GEO Specialist",
+  "On-Page SEO Expert",
+  "WordPress SEO Expert"
+];
+
+const el = document.getElementById("rotating-skill");
+let i = 0;
+
+setInterval(() => {
+  const face = el.parentElement;
+  face.classList.add("flipping");
+  setTimeout(() => {
+    i = (i + 1) % skills.length;
+    el.textContent = skills[i];
+    face.classList.remove("flipping");
+  }, 320);
+}, 2600);
+
 // Animated stat counters in the hero.
 const counters = document.querySelectorAll(".count");
 const observer = new IntersectionObserver((entries) => {

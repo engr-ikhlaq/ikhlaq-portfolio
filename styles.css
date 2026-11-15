@@ -103,10 +103,24 @@ img { max-width: 100%; height: auto; }
 .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero h1 .iam { color: var(--muted); font-weight: 600; font-size: .62em; display: block; margin-top: 10px; }
 
-.static-skill {
-  display: inline-block; margin-top: 8px; font-size: .72em; font-weight: 800;
-  background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+/* Flip-book skill card — pages flip over like a notepad, one skill after another */
+.flip-card { display: inline-block; margin-top: 14px; perspective: 700px; }
+.flip-face {
+  display: inline-block; position: relative;
+  background: #ffffff; color: #0b2545;
+  font-size: .72em; font-weight: 800; line-height: 1.15;
+  padding: 10px 22px; border-radius: 12px;
+  box-shadow: 0 14px 36px rgba(0,0,0,.5);
+  transform-origin: top center;
+  transition: transform .32s ease, opacity .32s ease;
 }
+/* spiral binding along the top edge, like the notepad in the reference */
+.flip-face::before {
+  content: ""; position: absolute; top: -6px; left: 16px; right: 16px; height: 10px;
+  background-image: radial-gradient(circle 3px at 4px 5px, #64748b 3px, transparent 3.6px);
+  background-size: 18px 10px; background-repeat: repeat-x;
+}
+.flip-face.flipping { transform: rotateX(-88deg); opacity: 0; }
 
 .hero-sub { margin: 24px 0; font-size: 18px; color: var(--muted); max-width: 580px; }
 .hero-sub strong { color: var(--ink); }
