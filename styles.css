@@ -108,14 +108,15 @@ img { max-width: 100%; height: auto; }
 .hero-stats strong { display: block; font-size: 30px; font-family: "Sora", sans-serif; }
 .hero-stats span { font-size: 13px; color: var(--muted); }
 
-/* Photo — edges diffused into the site background, no frame: it melts into the page */
+/* Photo — clean portrait, subtle border, no fade, no stickers on top */
 .hero-photo { position: relative; text-align: center; align-self: start; max-width: 440px; width: 100%; margin: 58px auto 0; }
 .photo-frame {
   position: relative; display: inline-block; border-radius: 24px; padding: 0;
-  background: transparent; box-shadow: none;
+  background: transparent; box-shadow: 0 24px 60px rgba(0,0,0,.45);
+  border: 1px solid rgba(255,255,255,.12);
 }
 .photo-frame img {
-  display: block; border-radius: 24px; width: 100%; max-width: 420px;
+  display: block; border-radius: 23px; width: 100%; max-width: 420px;
   max-height: 480px; object-fit: cover; object-position: top;
   background: transparent;
 }
