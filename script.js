@@ -15,7 +15,7 @@
     canvas.width = w * dpr; canvas.height = h * dpr;
     canvas.style.width = w + "px"; canvas.style.height = h + "px";
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const count = Math.max(40, Math.min(120, Math.round((w * h) / 14000)));
+    const count = Math.max(70, Math.min(220, Math.round((w * h) / 7500)));
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * w,
       y: Math.random() * h,
